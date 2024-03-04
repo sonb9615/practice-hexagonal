@@ -1,11 +1,15 @@
 package com.practice.hexagonal.coupon.adaptor.out;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "membership")
 @NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class MembershipEntity {
 
     @Id

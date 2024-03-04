@@ -3,12 +3,10 @@ package com.practice.hexagonal.coupon.application.port.in;
 
 import com.practice.hexagonal.coupon.domain.MembershipPlan.MembershipPlanId;
 import com.practice.hexagonal.coupon.domain.User.UserId;
-import lombok.EqualsAndHashCode;
 import lombok.NonNull;
 import lombok.Value;
 
 @Value
-@EqualsAndHashCode(callSuper = false)
 public class IssueCouponCommand {
 
     @NonNull

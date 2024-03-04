@@ -16,6 +16,14 @@ public class Coupon {
 
     private String status;
 
+    public Coupon(CouponId id, MembershipPlan.MembershipPlanId membershipPlanId, User.UserId issuerUserId, User.UserId userId, String status) {
+        this.id = id;
+        this.membershipPlanId = membershipPlanId;
+        this.issuerUserId = issuerUserId;
+        this.userId = userId;
+        this.status = status;
+    }
+
     public Coupon(MembershipPlan.MembershipPlanId membershipPlanId, User.UserId issuerUserId) {
         this.id = null;
         this.membershipPlanId = membershipPlanId;
@@ -29,9 +37,17 @@ public class Coupon {
                 this.id.getId() == null ? null : this.id.getId()
                 , this.membershipPlanId.getId()
                 ,this.issuerUserId.getId()
-                ,this.userId.getId()
+                ,this.userId.getId() == null ? null : this.userId.getId()
                 ,this.status
         );
+    }
+
+    public Coupon(CouponId couponId, MembershipPlan.MembershipPlanId membershipPlanId, User.UserId issuerUserId, String status, User.UserId userId){
+        this.id = couponId;
+        this.membershipPlanId = membershipPlanId;
+        this.issuerUserId = issuerUserId;
+        this.status = status;
+        this.userId = userId;
     }
 
     @Value

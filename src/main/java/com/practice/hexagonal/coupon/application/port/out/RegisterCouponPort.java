@@ -2,7 +2,7 @@ package com.practice.hexagonal.coupon.application.port.out;
 
 import com.practice.hexagonal.coupon.domain.Coupon;
 
-public interface LoadCouponPort {
+public interface RegisterCouponPort {
 
-    Coupon loadCoupon(Coupon.CouponId couponId);
+    void register(Coupon coupon);
 }
