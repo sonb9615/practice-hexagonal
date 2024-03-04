@@ -10,13 +10,13 @@ public class Coupon {
 
     private MembershipPlan.MembershipPlanId membershipPlanId;
 
-    private User.IssuerUserId issuerUserId;
+    private User.UserId issuerUserId;
 
     private User.UserId userId;
 
     private String status;
 
-    public Coupon(MembershipPlan.MembershipPlanId membershipPlanId, User.IssuerUserId issuerUserId) {
+    public Coupon(MembershipPlan.MembershipPlanId membershipPlanId, User.UserId issuerUserId) {
         this.id = null;
         this.membershipPlanId = membershipPlanId;
         this.issuerUserId = issuerUserId;
