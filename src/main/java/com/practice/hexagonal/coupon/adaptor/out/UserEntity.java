@@ -1,8 +1,6 @@
 package com.practice.hexagonal.coupon.adaptor.out;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
 
 @Entity
@@ -11,6 +9,7 @@ import lombok.NoArgsConstructor;
 public class UserEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
 }
